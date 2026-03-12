@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <title>form with js</title>
+   </head>
+   <body>
+    <h1>Validation form</h1>
+    <form id="1f" onsubmit="return form()">
+        name:
+        <input type="text" placeholder="name" id="name"><br><br>
+        password:
+        <input type="password" placeholder="enter your pass" id="pass"><br><br>
+        <input type="submit" value="submit"><br><br>
+    </form>
+
+    <script>
+
+        function form(){
+            let name= document.getElementById("name").value
+            let pass= document.getElementById("pass").value
+
+            if(name.trim()===""){
+                alert("Name must not be empty")
+                return false
+            }
+            if(pass.length<6){
+                alert("Password must me be altleast 6 character")
+                return false
+            }
+            alert("form submitted successfully!")
+            return true
+
+        }
+
+    </script>
+   </body>
+</html>
